@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script
+			src="https://kit.fontawesome.com/3fb6795dbf.js"
+			crossorigin="anonymous"
+		></script>
+		<script defer="" src="app.js"></script>
+		<link rel="stylesheet" href="style.css" />
+
+		<title>ARCADE CENTRAL-Minesweeper</title>
+	</head>
+	<body>
+		<!-- <audio src='jpgs/bensound-sunny.mp3' loop='true' autoplay='true'></audio> -->
+		<header>
+			<h1>MINESWEEPER</h1>
+		</header>
+
+		<div class="hamburgerMenu">
+			<i class="fas fa-bars"></i>
+		</div>
+		<div class="menu">
+			<a href="../">
+				<p>Home</p>
+			</a>
+			<a href="../mancala/">
+				<p>Mancala</p>
+			</a>
+		</div>
+		<main>
+			<div class="gameFloor">
+				<div class="game">
+					<div class="options">
+						<div>
+							<input
+								type="radio"
+								id="beginner"
+								name="level"
+								value="8"
+								checked
+							/>
+							<label for="beginner">Beginner</label>
+						</div>
+						<div>
+							<input type="radio" id="intermediate" name="level" value="16" />
+							<label for="intermediate">Intermediate</label>
+						</div>
+						<div>
+							<input type="radio" id="advanced" name="level" value="24" />
+							<label for="advanced">Advanced</label>
+						</div>
+						<button type="button" id="reset">Reset</button>
+					</div>
+					<div class="gameHeader">
+						<div class="mineNumber">
+							<div class="hundreds">0</div>
+							<div class="tens">1</div>
+							<div class="ones">0</div>
+						</div>
+						<div class="smiley">
+                            <i id='happy' class="fas fa-smile"></i>
+                            <i id='sad' class="fas fa-frown"></i>
+						</div>
+						<div class="timer">
+							<div class="hundredsSecs">0</div>
+							<div class="tensSecs">0</div>
+							<div class="onesSecs">0</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="clicking"></p>
+		</main>
+		<footer>
+			<p class="footer">
+				Created by, &nbsp;
+				<img src="jpgs/NODevV4.png" />
+				&nbsp;NODev. 2020
+			</p>
+		</footer>
+	</body>
+</html>

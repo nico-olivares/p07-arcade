@@ -1,0 +1,298 @@
+@font-face {
+	font-family: right;
+	src: url(fonts/Righteous/Righteous-Regular.ttf);
+}
+
+@font-face {
+	font-family: start;
+	src: url(fonts/Press_Start_2P/PressStart2P-Regular.ttf);
+}
+
+@font-face {
+	font-family: digits;
+	src: url(fonts/digital-7/digital-7.ttf);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	box-sizing: border-box;
+	background-color: black;
+	color: white;
+}
+
+/* ********************************************
+Header */
+
+header {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100px;
+	background-color: yellow;
+	font-family: start;
+	color: black;
+	z-index: 1;
+}
+
+h1 {
+	padding-top: 10px;
+	font-size: 50px;
+}
+
+.hamburgerMenu {
+	position: fixed;
+	top: 30px;
+	right: 20px;
+	color: black;
+	font-size: 40px;
+	z-index: 2;
+}
+
+.menu {
+	display: none;
+	position: fixed;
+	top: 80px;
+	right: 20px;
+	background-color: rgb(54, 138, 138);
+	border-radius: 10px;
+	padding: 0px 10px;
+	z-index: 2;
+}
+
+.menu a {
+	text-decoration: none;
+}
+
+/* **************************************************** 
+main top */
+
+main {
+	/* background-image: url(jpgs/station.jpg); 
+    background-size: stretch; */
+	margin-top: 110px;
+	font-family: right;
+}
+
+/* ************************************************ 
+Game */
+
+.game {
+	background-color: #f5d5af;
+	border-radius: 10px;
+	width: 1000px;
+	height: 500px;
+	margin: 30px auto;
+
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+	align-items: center;
+}
+
+.gameHeader {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: gray;
+	height: 50px;
+	margin-top: 20px;
+	border: 5px groove black;
+}
+
+.gameHeader8 {
+	width: 240px;
+	margin-top: 50px;
+}
+
+.gameHeader16 {
+	width: 400px;
+	margin-top: 10px;
+}
+
+.gameHeader24 {
+	width: 408px;
+	margin-top: 5px;
+}
+
+.grid {
+	display: grid;
+	background-color: gray;
+}
+
+.grid8 {
+	grid-template-rows: repeat(8, 1fr);
+	grid-template-columns: repeat(8, 1fr);
+}
+
+.grid16 {
+	grid-template-rows: repeat(16, 1fr);
+	grid-template-columns: repeat(16, 1fr);
+}
+
+.grid24 {
+	grid-template-rows: repeat(24, 1fr);
+	grid-template-columns: repeat(24, 1fr);
+}
+
+.mineNumber,
+.timer {
+	background-color: black;
+	width: 60px;
+	height: 30px;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+}
+
+.mineNumber,
+.timer div {
+	color: green;
+	font-family: digits;
+	font-size: 24px;
+	text-align: center;
+}
+
+.smiley {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: yellow;
+	font-size: 28px;
+	border: 2px groove black;
+	width: 35px;
+	height: 35px;
+}
+
+#happy {
+	display: block;
+}
+
+#sad {
+	display: none;
+}
+
+.cell {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 30px;
+	width: 30px;
+	background-color: gray;
+	border: 2px groove black;
+
+	/*debugger */
+	font-size: 12px;
+	font-weight: bold;
+	color: black;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.cell[value='1'][isHidden='false'] {
+	color: blue;
+}
+
+.cell[value='2'][isHidden='false'] {
+	color: green;
+}
+
+.cell[value='3'][isHidden='false'] {
+	color: red;
+}
+
+.cell[value='4'][isHidden='false'] {
+	color: navy;
+}
+
+.cell[value='5'][isHidden='false'] {
+	color: brown;
+}
+
+.cell[value='6'][isHidden='false'],
+.cell[value='7'][isHidden='false'],
+.cell[value='8'][isHidden='false'] {
+	color: purple;
+}
+
+.mine {
+    width: 17px;
+    height: 17px;
+}
+
+.flag {
+	width: 15px;
+}
+
+.grid8 .cell {
+	height: 30px;
+	width: 30px;
+}
+
+.grid16 .cell {
+	height: 25px;
+	width: 25px;
+}
+
+.grid24 .cell {
+	height: 17px;
+	width: 17px;
+}
+
+.clicking {
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-top: -20px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: white;
+}
+
+.options {
+	color: black;
+
+	width: 900px;
+	height: 30px;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#reset {
+	font-family: right;
+	font-size: 16px;
+	background-color: chocolate;
+	border-radius: 5px;
+}
+
+/* ******************************************** 
+footer */
+
+footer {
+	position: fixed;
+	background-color: gray;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 40px;
+	font-size: 14px;
+}
+
+footer p {
+	margin-bottom: 0px;
+	margin-top: 10px;
+	text-align: center;
+}
+
+footer img {
+	width: 20px;
+}

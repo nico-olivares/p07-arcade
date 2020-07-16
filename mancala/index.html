@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script
+			src="https://kit.fontawesome.com/3fb6795dbf.js"
+			crossorigin="anonymous"
+		></script>
+		<script defer="" src="app.js"></script>
+		<link rel="stylesheet" href="style.css" />
+
+		<title>ARCADE CENTRAL-Mancala</title>
+	</head>
+	<body>
+        <audio src='jpgs/bensound-sunny.mp3' loop='true' autoplay='true'>
+        </audio>
+		<header>
+			<h1>MANCALA</h1>
+		</header>
+		<div class="hamburgerMenu">
+			<i class="fas fa-bars"></i>
+		</div>
+		<div class="menu">
+			<a href="../">
+				<p>Home</p>
+			</a>
+			<a href="../minesweeper/">
+				<p>Minesweeper</p>
+			</a>
+			
+		</div>
+		<main>
+			<div class="subtitle">
+				<div class="instructions">
+					<a
+						href="https://endlessgames.com/wp-content/uploads/Mancala_Instructions.pdf"
+						target="popup"
+						onclick="window.open('https://endlessgames.com/wp-content/uploads/Mancala_Instructions.pdf','popup','width=800,height=650'); return false;"
+					>
+						Instructions
+					</a>
+				</div>
+				<div class="setup">
+					<div class="one">
+						<input type="radio" id="solo" name="options" value="one" checked/>
+						<label for="solo">One Player</label>
+					</div>
+					<div class="spacer"></div>
+					<div class="two">
+						<input type="radio" id="two" name="options" value="two"/>
+						<label for="two">Two Players</label>
+					</div>
+				</div>
+				<div class="rightOptions">
+					<input class="resetButton" type="button" name="Reset" value="Reset" />
+					
+				</div>
+			</div>
+			<div class="gameFloor">
+				<div class="playerOne player">
+					<p class="playerText playerOneText">Player One</p>
+					<p class="playerScore playerOneScore">0</p>
+					<p class="winnerOne winner">Winner!</p>
+					<p class="tie">Tie!</p>
+				</div>
+				<div class="game"></div>
+				<div class="playerTwo player">
+					<p class="playerText playerTwoText">Player Two</p>
+					<p class="playerScore playerTwoScore">0</p>
+					<p class="winnerTwo winner">Winner!</p>
+					<p class="tie">Tie!</p>
+				</div>
+            </div>
+            <p class='clicking'>*Click on the pit (brown), not on the stones.<br>*In One Player mode you are player one, top row.<br>*Background music by https://www.bensound.com/ (may have to authorize the page to play music).</p>
+		</main>
+		<footer>
+			<p class="footer">
+				Created by, &nbsp;
+				<img src="jpgs/NODevV4.png" />
+				&nbsp;NODev. 2020
+			</p>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,239 @@
+@font-face {
+    font-family: right;
+    src: url(fonts/Righteous/Righteous-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: start;
+    src: url(fonts/Press_Start_2P/PressStart2P-Regular.ttf);
+  }
+
+body {
+    box-sizing: border-box; 
+    background-color: black;
+    color: white;
+}
+
+/* ********************************************
+Header */
+
+header {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100px;
+    background-color: yellow;
+    font-family: start;
+    color: black;
+    z-index: 1;
+}
+
+h1 {
+    padding-top: 10px;
+    font-size: 50px;
+}
+
+.hamburgerMenu {
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    color: black;
+    font-size: 40px;
+    z-index: 2;
+}
+
+.menu {
+    display: none;
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background-color: rgb(54, 138, 138);
+    border-radius: 10px;
+    padding: 0px 10px;
+    z-index: 2;
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+/* **************************************************** 
+main top */
+
+
+
+main {
+    /* background-image: url(jpgs/station.jpg); 
+    background-size: stretch; */
+    margin-top: 120px;
+    font-family: right;
+}
+
+.subtitle {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 20px;
+    font-size: 20px;
+    margin: 0px;
+}
+
+.setup {
+    display: flex;
+    justify-content: center;
+    flex-basis: 80%;
+}
+
+.spacer {
+    width: 50px;
+}
+
+.rightOptions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resetButton {
+    background-color: chocolate;
+    border-radius: 5px;
+    height: 30px;
+    font-size: 20px;
+    font-family: right;
+}
+
+.labelCheckBox {
+    font-size: 20px;
+}
+
+/* ************************************************ 
+Game */
+
+.gameFloor {
+    display: flex;
+    justify-content: space-around;
+}
+
+.player {
+    border-radius: 10px;
+    height: 40p;
+    font-size: 30px;
+    text-align: center;
+    margin: 60px 20px;
+}
+
+.playerScore {
+    display: none;
+}
+
+.playerText {
+    border-radius: 10px;
+    margin: 5px;
+}
+.playerOneText {
+    background-color: gray;
+}
+
+.winner,.tie {
+    display: none;
+}
+
+
+.game {
+    background-color: #f5d5af;
+    border-radius: 10px;
+    width: 1020px;
+    height: 400px;
+    margin: 30px auto;
+
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.pit {
+    background-color: #5c2c11;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: auto 2px;
+}
+
+#pit0,#pit7 {
+    background-color: #5c2c11;
+    width: 120px;
+    height: 340px;
+    border-radius: 50px;
+    margin: auto 2px;
+}
+
+#pit0 {
+    grid-area: 1 / 1 / 3 / 2;
+    margin-left: 10px;
+}
+
+#pit7 {
+    grid-area: 1 / 8 / 3 / 9;
+    margin-right: 10px;
+}
+
+.clicking {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: -20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: white;
+}
+
+.stone {
+    position: absolute;
+    width: 20px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    font-size: 7px;
+    padding-top: 14px;
+    padding-left: 5px;
+    color: black;
+}
+
+
+
+/* ******************************************** 
+footer */
+
+footer {
+    position: fixed;
+    background-color: gray;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+}
+
+footer p {
+    margin-bottom: 0px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+footer img {
+    width: 20px;
+
+}
+
+
+audio {
+    background-color: white;
+}
