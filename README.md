@@ -9,3 +9,5 @@ The Mancala page has background music that will play on some browsers without in
 
 The other game is Minesweeper. This game is pretty much up to spect with the original game. There are three levels to select from. 
 The levels determine the grid size and number of bombs.
+
+This project is deployed at https://arcade-olivares.netlify.app/ 
